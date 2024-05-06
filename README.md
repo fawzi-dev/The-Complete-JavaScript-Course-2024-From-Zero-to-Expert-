@@ -16,4 +16,4 @@ Here's to unlocking the full potential of JavaScript development and taking my s
 
 Let's do this!
 
-[fawzitheprogrammer]
+[[fawzitheprogrammer]](https://github.com/fawzitheprogrammer/)
