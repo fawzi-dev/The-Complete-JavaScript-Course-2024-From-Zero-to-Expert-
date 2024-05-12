@@ -1,9 +1,5 @@
 'use strict';
 
-// Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
@@ -134,8 +130,70 @@ const game = {
 
 
 
-const menu = restaurant.mainMenu;
+///////////////////////////////////////
+// Coding Challenge #2
 
-for (const [i, el] of menu.entries()) {
-  console.log(i)
+/* 
+Let's continue with our football betting app!
+
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+
+GOOD LUCK 😀
+*/
+
+// Task 1
+// for (const [goal, player] of game.scored.entries()) {
+//   console.log(`Goal ${goal + 1}: ${player}`)
+// }
+
+
+// Task 2
+
+// const values = Object.values(game.odds);
+
+// for (let i = 0; i < values.length; i++) {
+//   let total = 0;
+//   total += values[i];
+//   console.log(`Average ${total / 4}`)
+// }
+
+// Task 3
+// const teams = Object.keys(game.odds);
+// const odds = Object.values(game.odds);
+
+// for (let i = 0; i < teams.length; i++) {
+
+//   teams[i] !== 'x' ? console.log(`Odd of victory ${game[teams[i]]} ${odds[i]}`) : console.log(`Odd of draw ${odds[i]}`)
+
+// }
+
+
+///////////////////////////////////////
+// String Methods Practice
+
+const flights = '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
+
+
+for (const flight of flights.split('+')) {
+
+  const [type, from, to, time] = flight.split(';');
+
 }
