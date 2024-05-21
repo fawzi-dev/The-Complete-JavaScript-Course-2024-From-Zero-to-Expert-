@@ -101,22 +101,34 @@ displayMovement(account1.movements)
 
 
 
+// const numbers1 = [1, 2, 3, 4, 5];
 
 
+// const uesr = 'Steven Thomas William';
+
+// const createUsername = function (accs) {
+
+//   accs.forEach(acc => {
+//     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
+//   });
 
 
+// }
+
+// createUsername(accounts)
+
+// console.log(accounts)
 
 
+// const withdrawal = movements.filter((movement) => movement < 1);
+
+// console.log(withdrawal);
 
 
-const eqAll = function () {
-  return this;
-}
+const balance = movements.reduce((acc, cv, movement, arr) => {
+  console.log(`Iteration ${acc}`);
+  return acc + cv;
+})
+console.log(balance);
 
-
-Array.prototype.eqAll = function (a) {
-  return this;
-};
-
-
-console.log('aa'.eqAll);
+labelBalance.textContent = `$${balance}`;
